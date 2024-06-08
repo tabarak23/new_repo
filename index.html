@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevOpsCreators - Your DevOps Partner</title>
   <style>
-    /* Add your custom CSS styles here */
+    /* Custom CSS styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
+      background-color: #f0f2f5;
     }
     .container {
       max-width: 1200px;
@@ -18,14 +18,18 @@
       padding: 20px;
     }
     header {
-      background-color: #333;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1200x300?tech');
       color: #fff;
-      padding: 10px 0;
+      padding: 50px 0;
       text-align: center;
+      background-size: cover;
+      background-position: center;
     }
     nav {
       text-align: center;
       margin-bottom: 20px;
+      background-color: #333;
+      padding: 10px 0;
     }
     nav ul {
       list-style-type: none;
@@ -40,6 +44,12 @@
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #575757;
+      border-radius: 5px;
     }
     section {
       padding: 20px;
@@ -54,6 +64,76 @@
       text-align: center;
       padding: 10px 0;
     }
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .services ul li {
+      background: #f7f7f7;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+    }
+    .services ul li img {
+      max-width: 50px;
+      margin-right: 10px;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 3px;
+      border: 1px solid #ddd;
+    }
+    .contact-form input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .contact-form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .team-member {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width: calc(33% - 40px);
+    }
+    .team-member img {
+      border-radius: 50%;
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    .team-member h3 {
+      margin-top: 0;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .team-member {
+        width: calc(50% - 40px);
+      }
+    }
+    @media (max-width: 480px) {
+      .team-member {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -67,28 +147,50 @@
   <ul>
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About Us</a></li>
+    <li><a href="#team">Our Team</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <div class="container">
 
-  <section id="services">
+  <section id="services" class="services">
     <h2>Our Services</h2>
     <p>We offer a range of DevOps and cloud services to streamline your development and deployment processes.</p>
     <ul>
-      <li>Continuous Integration & Deployment (CI/CD)</li>
-      <li>Infrastructure as Code (IaC)</li>
-      <li>Cloud Migration & Optimization</li>
-      <li>Monitoring & Automation</li>
+      <li><img src="https://via.placeholder.com/50" alt="CI/CD">Continuous Integration & Deployment (CI/CD)</li>
+      <li><img src="https://via.placeholder.com/50" alt="IaC">Infrastructure as Code (IaC)</li>
+      <li><img src="https://via.placeholder.com/50" alt="Cloud">Cloud Migration & Optimization</li>
+      <li><img src="https://via.placeholder.com/50" alt="Monitoring">Monitoring & Automation</li>
       <!-- Add more services as needed -->
     </ul>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>DevOpsCreators is dedicated to helping businesses leverage the power of DevOps practices and cloud technologies.</p>
+    <p>DevOpsCreators is dedicated to helping businesses leverage the power of DevOps practices and cloud technologies. Our mission is to enable continuous improvement and rapid deployment through effective DevOps strategies.</p>
   </section>
+
+  <section id="team" class="team">
+  <h2>Our Team</h2>
+  <div class="team-member">
+    <img src="picn.jpg" alt="Khaja Tabarak Uddin">
+    <h3>Khaja Tabarak Uddin</h3>
+    <p>Founder & CEO</p>
+  </div>
+  <div class="team-member">
+    <img src="cvx_053251_page-0001.jpg" alt="Owais Ali (Abu Shair)">
+    <h3>Owais Ali (Abu Shair)</h3>
+    <p>Project Manager</p>
+  </div>
+  <div class="team-member">
+    <img src="Screenshot_2024-06-08-17-46-36-538_com.miui.gallery.png" alt="Taha Bond">
+    <h3>Taha Bond</h3>
+    <p>Product Manager</p>
+  </div>
+  <!-- Add more team members as needed -->
+</section>
+
 
   <section id="contact">
     <h2>Contact Us</h2>
@@ -98,7 +200,7 @@
       <!-- Add more contact details as needed -->
     </ul>
     <p>Or use the form below:</p>
-    <form action="#" method="post">
+    <form action="#" method="post" class="contact-form">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required><br><br>
       <label for="email">Email:</label>
@@ -117,4 +219,3 @@
 
 </body>
 </html>
-
